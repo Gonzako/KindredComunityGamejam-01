@@ -30,5 +30,11 @@ public class BasicBulletBehaviour : MonoBehaviour
             hittable.OnBulletHit(this.gameObject);
             OnBulletHit.Invoke();
         }
+        StoreInPool();
+    }
+
+    private void StoreInPool()
+    {
+
     }
 }

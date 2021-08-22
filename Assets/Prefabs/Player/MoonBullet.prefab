@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 8405071733992802471, guid: 8c1657cbc4261da46b7fc45b5305c017, type: 3}
+      propertyPath: m_TagString
+      value: MoonBullet
+      objectReference: {fileID: 0}
     - target: {fileID: 8405071733992802473, guid: 8c1657cbc4261da46b7fc45b5305c017, type: 3}
       propertyPath: m_RootOrder
       value: 0
