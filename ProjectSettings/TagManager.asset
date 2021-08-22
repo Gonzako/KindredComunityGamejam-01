@@ -13,10 +13,10 @@ TagManager:
   - UI
   - PlayerLayer
   - 
-  - 
-  - 
-  - 
-  - 
+  - EnemyBullets
+  - Outline
+  - SunBullets
+  - MoonBullets
   - 
   - 
   - 
