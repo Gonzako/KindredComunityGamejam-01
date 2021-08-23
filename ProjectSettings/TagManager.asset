@@ -15,8 +15,8 @@ TagManager:
   - Water
   - UI
   - PlayerLayer
-  - 
-  - EnemyBullets
+  - EnemySunBullets
+  - EnemyMoonBullets
   - Outline
   - SunBullets
   - MoonBullets
