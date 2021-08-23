@@ -19,6 +19,7 @@ public class BasicBulletBehaviour : MonoBehaviour
     private void OnEnable()
     {
         rb.velocity = transform.right * speed;
+        StartCoroutine(Cleanup());
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -35,6 +36,13 @@ public class BasicBulletBehaviour : MonoBehaviour
 
     private void StoreInPool()
     {
+        BulletPooler.Instance.AddBullet(this);
 
+    }
+
+    private IEnumerator Cleanup()
+    {
+        yield return new WaitForSeconds(40);
+        StoreInPool();
     }
 }

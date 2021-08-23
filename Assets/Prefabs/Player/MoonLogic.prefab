@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2043656406, guid: d7c215cd0f0e4ed4eaba9457f99f8f44, type: 3}
+      propertyPath: Tag
+      value: MoonBullet
+      objectReference: {fileID: 0}
     - target: {fileID: 5517155925913894067, guid: d7c215cd0f0e4ed4eaba9457f99f8f44, type: 3}
       propertyPath: m_Name
       value: MoonVisuals
