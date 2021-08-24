@@ -7,6 +7,7 @@ TagManager:
   - MoonBullet
   - SunBullet
   - EnemyBullet
+  - EnemyMoonBullet
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Outline
   - SunBullets
   - MoonBullets
-  - 
-  - 
+  - SunLayer
+  - MoonLayer
   - 
   - 
   - 
@@ -43,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 2231332099
     locked: 0

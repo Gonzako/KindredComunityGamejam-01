@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 8784601142632109962}
   - component: {fileID: 8784601142632109963}
   - component: {fileID: 8784601142632109960}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: SunLogic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6df39f63530b3844c89c17433b798201, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6df39f63530b3844c89c17433b798201, type: 3}
       propertyPath: m_LocalRotation.w
@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6df39f63530b3844c89c17433b798201, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6df39f63530b3844c89c17433b798201, type: 3}
       propertyPath: m_LocalRotation.w

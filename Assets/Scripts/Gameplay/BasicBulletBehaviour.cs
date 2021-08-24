@@ -22,7 +22,7 @@ public class BasicBulletBehaviour : MonoBehaviour
         StartCoroutine(Cleanup());
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         var hittable = collision.gameObject.GetComponent<IHittable>();
 
@@ -33,6 +33,7 @@ public class BasicBulletBehaviour : MonoBehaviour
         }
         StoreInPool();
     }
+
 
     private void StoreInPool()
     {

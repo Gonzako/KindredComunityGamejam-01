@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoonLogic
       objectReference: {fileID: 0}
+    - target: {fileID: 8784601142632109964, guid: d7c215cd0f0e4ed4eaba9457f99f8f44, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 8784601142632109965, guid: d7c215cd0f0e4ed4eaba9457f99f8f44, type: 3}
       propertyPath: m_RootOrder
       value: 0
