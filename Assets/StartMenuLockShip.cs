@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ScriptableObjectArchitecture;
+using UnityEngine.UI;
 
-public class TimerSwitcher : MonoBehaviour
+public class StartMenuLockShip : MonoBehaviour
 {
-
     [SerializeField]
-    GameEvent OnTimerTriggered;
-    
+    Image Filler;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +17,12 @@ public class TimerSwitcher : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.gameObject.SetActive(false);
+        Filler.color = Color.white;
+
     }
 }
