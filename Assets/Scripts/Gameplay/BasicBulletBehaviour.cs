@@ -43,7 +43,7 @@ public class BasicBulletBehaviour : MonoBehaviour
 
     private IEnumerator Cleanup()
     {
-        yield return new WaitForSeconds(40);
+        yield return new WaitForSeconds(10);
         StoreInPool();
     }
 }

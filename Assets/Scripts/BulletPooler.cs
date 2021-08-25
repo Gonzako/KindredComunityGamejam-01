@@ -12,7 +12,7 @@ public class BulletPooler : MonoBehaviour
     Dictionary<string, GameObject> tagToGO = new Dictionary<string, GameObject>();
     public static void SetupInstance()
     {
-        if(Instance == null)
+        if(_Instance == null)
         {
             var go = new GameObject("Bullet Pooler");
             _Instance = go.AddComponent<BulletPooler>();

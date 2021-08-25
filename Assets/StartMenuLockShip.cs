@@ -7,6 +7,8 @@ public class StartMenuLockShip : MonoBehaviour
 {
     [SerializeField]
     Image Filler;
+
+    [SerializeField]UnityEngine.Events.UnityEvent OnTriggered;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,6 @@ public class StartMenuLockShip : MonoBehaviour
     {
         collision.gameObject.SetActive(false);
         Filler.color = Color.white;
-
+        OnTriggered.Invoke();
     }
 }
