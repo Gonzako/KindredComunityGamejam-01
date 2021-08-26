@@ -33,7 +33,7 @@ public class PlayerBulletSpawner : MonoBehaviour
         }
     }
 
-    private void CreateShot()
+    public void CreateShot()
     {
         var target = BulletPooler.Instance.GetBullet(Tag);
         target.transform.position = transform.position;
