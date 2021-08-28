@@ -20,10 +20,13 @@ public class MoonHitLogic : MonoBehaviour, IHittable
     private int HitsLeft = 3;
     private const int MaxHitsLeft = 3;
 
+    private bool Iframe;
+
 
     public void OnBulletHit(GameObject hitter)
     {
         HitsLeft--;
+        
 
         if (HitsLeft == 0)
         {
@@ -49,7 +52,10 @@ public class MoonHitLogic : MonoBehaviour, IHittable
         
     }
 
-
+    public void OnTimerReset()
+    {
+        HitsLeft = MaxHitsLeft;
+    }
     IEnumerator GettingHitVisualRoutine()
     {
         yield return null;

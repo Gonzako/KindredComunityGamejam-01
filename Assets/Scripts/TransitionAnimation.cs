@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using System;
+using UnityEngine.SceneManagement;
 
 public class TransitionAnimation : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class TransitionAnimation : MonoBehaviour
 
     [SerializeField]
     ScriptableObjectArchitecture.GameEvent OnStartLevelAnimation;
+    AsyncOperation GameScene;
 
 
     bool setOnce = false;
@@ -26,6 +28,8 @@ public class TransitionAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameScene = SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+        GameScene.allowSceneActivation = false;
         
     }
 
@@ -50,9 +54,10 @@ public class TransitionAnimation : MonoBehaviour
 
     private IEnumerator MoveToLevelOneAnimation()
     {
-        var canvasGroup = GetComponent<CanvasGroup>();
+        CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
 
         var tween = canvasGroup.DOFade(0, 0.8f);
+        
 
         SunGO.transform.position = Sun2Place.position;
         MoonGO.transform.position = Moon2Place.position;
@@ -64,5 +69,8 @@ public class TransitionAnimation : MonoBehaviour
 
         SunGO.transform.DOLocalMove(Vector2.left*0.5f, 1f).SetEase(Ease.InOutQuint);
         MoonGO.transform.DOLocalMove(Vector2.left*-0.5f, 1f).SetEase(Ease.InOutQuint);
+
+        yield return new WaitForSeconds(1f);
+        GameScene.allowSceneActivation = true;
     }
 }
