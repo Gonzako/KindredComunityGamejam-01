@@ -20,13 +20,15 @@ public class MoonHitLogic : MonoBehaviour, IHittable
     private int HitsLeft = 3;
     private const int MaxHitsLeft = 3;
 
-    private bool Iframe;
+    private bool IFrame;
 
 
     public void OnBulletHit(GameObject hitter)
     {
+        if (IFrame)
+            return;
         HitsLeft--;
-        
+        StartCoroutine(IFrameRoutine());
 
         if (HitsLeft == 0)
         {
@@ -66,5 +68,12 @@ public class MoonHitLogic : MonoBehaviour, IHittable
 
         Time.timeScale = 1;
 
+    }
+
+    IEnumerator IFrameRoutine()
+    {
+        IFrame = true;
+        yield return new WaitForSeconds(0.3f);
+        IFrame = false;
     }
 }

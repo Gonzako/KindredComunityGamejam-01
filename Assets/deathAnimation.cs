@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 
-public class soundDifusser : MonoBehaviour
+public class deathAnimation : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,11 +14,5 @@ public class soundDifusser : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void startDiffusingMusic(float time = 1.4f)
-    {
-        var audioSource = GetComponent<AudioSource>();
-        audioSource.DOFade(0, time);
     }
 }
